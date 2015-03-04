@@ -9,6 +9,9 @@ gem 'devise'
 # Whateva sqlite. Postgres for the win!
 gem 'pg'
 
+# Umm .. yeah, I want bootstrap!
+gem 'bootstrap-sass'\
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
 
