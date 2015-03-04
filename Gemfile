@@ -55,4 +55,7 @@ end
 group :production do
   # We definitely want to run this on Heroku!
   gem 'rails_12factor'
+
+  # Fine, we'll use Puma in production.
+  gem 'puma'
 end
