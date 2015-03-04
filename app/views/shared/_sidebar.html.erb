@@ -1,0 +1,6 @@
+<ul class="nav nav-pills" role="tablist">
+  <li class="active"><%= link_to 'Users', users_path %></li>
+  <% if current_user %>
+    <li><%= link_to 'My Files', '/files' %></li>
+  <% end %>
+</ul>

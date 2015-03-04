@@ -10,7 +10,13 @@ gem 'devise'
 gem 'pg'
 
 # Umm .. yeah, I want bootstrap!
-gem 'bootstrap-sass'\
+gem 'bootstrap-sass'
+
+# Ya know what else is awesome? Pictures.
+gem 'paperclip'
+
+# WOOOOOO! S3!
+gem 'aws-sdk', '~> 1.63'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
