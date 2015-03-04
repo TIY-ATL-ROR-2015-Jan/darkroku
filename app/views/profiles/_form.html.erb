@@ -1,0 +1,14 @@
+<%= form_for [@user, @user.profile] do |f| %>
+
+    <%= f.text_field :bio %>
+
+    <%= f.text_field :homepage %>
+
+    <%= f.text_field :first_name %>
+
+    <%= f.text_field :last_name %>
+
+    <%= f.file_field :avatar %>
+
+    <%= f.submit %>
+<% end %>
