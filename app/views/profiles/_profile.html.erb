@@ -1,7 +1,11 @@
 <%= div_for profile do %>
+  <%= image_tag profile.avatar.url(:thumb) %>
   <div class="name"><%= profile.full_name %></div>
   <div class="bio"><%= profile.bio %></div>
   <div class="homepage">
     <%= link_to 'Homepage', profile.homepage %>
   </div>
+  <% if current_user == profile.user %>
+    <%= link_to "Edit Profile", user_profile_path(current_user) %>
+  <% end %>
 <% end %>
