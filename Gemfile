@@ -12,8 +12,8 @@ gem 'pg'
 # Umm .. yeah, I want bootstrap!
 gem 'bootstrap-sass'
 
-# Let's add uploads to S3 too!
-gem 'aws-sdk'
+# Ya know what else is awesome? Pictures.
+gem 'paperclip'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
