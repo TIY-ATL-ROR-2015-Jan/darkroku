@@ -16,7 +16,7 @@ gem 'bootstrap-sass'
 gem 'paperclip'
 
 # WOOOOOO! S3!
-gem 'aws-sdk'
+gem 'aws-sdk', '~> 1.63'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
