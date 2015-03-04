@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
   devise_for :users
+
+  resources :users, :only => [:show, :index] do
+    get 'edit_profile', to: 'users#edit_profile', as: 'edit_profile'
+    put 'update_profile', to: 'users#update_profile', as: 'update_profile'
+  end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

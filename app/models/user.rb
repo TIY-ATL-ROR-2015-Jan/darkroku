@@ -4,6 +4,15 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  has_one :profile
+  has_one :profile, dependent: :destroy
   validates :username, presence: true, uniqueness: true
+
+  after_create :set_default_profile!
+
+  private
+  def set_default_profile!
+    unless self.profile
+      self.profile = Profile.create
+    end
+  end
 end

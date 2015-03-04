@@ -1,0 +1,8 @@
+<h2>Users</h2>
+
+<%= div_for user do %>
+  <% profile = user.profile %>
+  <div class="name"><%= profile.full_name %></div>
+  <div class="bio"><%= profile.bio %></div>
+  <div class="homepage"><%= link_to 'Homepage', profile.homepage %></div>
+<% end %>
