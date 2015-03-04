@@ -4,8 +4,8 @@ Rails.application.routes.draw do
   root to: 'users#index'
 
   resources :users, :only => [:show, :index] do
-    get 'edit_profile', to: 'users#edit_profile', as: 'edit_profile'
-    put 'update_profile', to: 'users#update_profile', as: 'update_profile'
+    get 'profile', to: 'users#edit_profile'
+    put 'profile', to: 'users#update_profile'
   end
 
   # The priority is based upon order of creation: first created -> highest priority.
