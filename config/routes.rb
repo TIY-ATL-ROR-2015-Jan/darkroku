@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users
 
+  root to: 'users#index'
+
   resources :users, :only => [:show, :index] do
     get 'edit_profile', to: 'users#edit_profile', as: 'edit_profile'
     put 'update_profile', to: 'users#update_profile', as: 'update_profile'
