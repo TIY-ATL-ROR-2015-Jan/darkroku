@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   root to: 'users#index'
 
   resources :users, :only => [:show, :index] do
+    get 'spam_me', to: 'users#spam_me'
     get 'profile', to: 'users#edit_profile'
     put 'profile', to: 'users#update_profile'
   end

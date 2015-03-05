@@ -1,6 +1,13 @@
 class UsersController < ApplicationController
+  before_action :authenticate_user!, :only => [:spam_me]
+
   def index
     @users = User.includes(:profile).all
+  end
+
+  def spam_me
+    TestMailer.boring(current_user).deliver_now
+    redirect_to :index
   end
 
   def show
