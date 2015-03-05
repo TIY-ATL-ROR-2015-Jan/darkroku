@@ -85,4 +85,17 @@ Rails.application.configure do
       :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
     }
   }
+
+  config.action_mailer.default_url_options = {
+    host: 'serene-sea-7663.herokuapp.com'
+  }
+  config.action_mailer.smtp_settings = {
+    :port => 587,
+    :address => "smtp.mandrillapp.com",
+    :user_name => ENV["MANDRILL_USERNAME"],
+    :password => ENV["MANDRILL_APIKEY"],
+    :domain => "heroku.com",
+    :authentication => :plain
+  }
+  config.action_mailer.delivery_method = :smtp
 end
