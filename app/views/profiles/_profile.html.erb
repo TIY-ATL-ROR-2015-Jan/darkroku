@@ -1,5 +1,7 @@
 <%= div_for profile do %>
-  <%= image_tag profile.avatar.url(:thumb) %>
+  <% if profile.avatar %>
+    <%= image_tag profile.avatar.url(:thumb) %>
+  <% end %>
   <div class="name"><%= profile.full_name %></div>
   <div class="bio"><%= profile.bio %></div>
   <div class="homepage">

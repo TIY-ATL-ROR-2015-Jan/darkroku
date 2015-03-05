@@ -11,8 +11,13 @@ class User < ActiveRecord::Base
 
   private
   def set_default_profile!
+    defaults = {
+      :first_name => 'Edit',
+      :last_name => 'Me',
+      :bio => "A long and happy story."
+    }
     unless self.profile
-      self.profile = Profile.create
+      self.profile = Profile.create(defaults)
     end
   end
 end
