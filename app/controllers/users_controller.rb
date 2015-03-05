@@ -7,7 +7,7 @@ class UsersController < ApplicationController
 
   def spam_me
     TestMailer.boring(current_user).deliver_now
-    redirect_to :index
+    redirect_to users_path
   end
 
   def show
